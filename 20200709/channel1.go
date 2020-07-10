@@ -10,7 +10,7 @@ func main(){
 	go func(){
 		for i := 0 ;i < 10 ; i++{
 			fmt.Println("子goroutine,i",i)
-	}
+		}
 	fmt.Println("结束...")
     ch1 <- true
 	}()

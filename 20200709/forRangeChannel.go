@@ -10,9 +10,11 @@ func main(){
 	*/
 	ch1 := make(chan int)
 	go sendData(ch1)
+
 	for v := range ch1{
 		fmt.Println("读取数据",v)
 	}
+
 	fmt.Println("main...over...")
 }
 

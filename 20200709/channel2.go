@@ -5,9 +5,10 @@ import("fmt"
 
 func main(){
 	ch1 := make(chan int)
+
 	go func() {
 		fmt.Println("子goroutine开始执行...")
-//		time.Sleep(3*time.Second)
+		//time.Sleep(3*time.Second)
 		data := <- ch1
 		fmt.Println("data",data)
     }()
